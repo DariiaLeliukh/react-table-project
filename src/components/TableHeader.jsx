@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 
 function TableHeader(props) {
   const columnHeaders = [];
@@ -8,7 +8,14 @@ function TableHeader(props) {
         <th key={i}>
           <button
             type="button"
-            onClick={() => props.setSortedField(props.columns[i])}
+            onClick={() => {
+              props.requestSort(props.columns[i]);
+            }}
+            className={
+              props.sortConfig.key === props.columns[i]
+                ? props.sortConfig.direction
+                : ""
+            }
           >
             {props.columns[i]}
           </button>
@@ -21,6 +28,7 @@ function TableHeader(props) {
 
   return (
     <>
+      <tr>{props.sortingOrder}</tr>
       <tr>{columnHeaders}</tr>
     </>
   );
