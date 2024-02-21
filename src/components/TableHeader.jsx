@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function TableHeader(props) {
   const columnHeaders = [];
   for (let i = 0; i < props.columns.length; i++) {
@@ -28,7 +26,6 @@ function TableHeader(props) {
 
   return (
     <>
-      <tr>{props.sortingOrder}</tr>
       <tr>{columnHeaders}</tr>
     </>
   );

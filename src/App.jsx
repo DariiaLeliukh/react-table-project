@@ -8,6 +8,7 @@ function App() {
     <>
       <Table
         data={data}
+        //columns should match what we want to pass as data
         columns={["id", "name", "quantity", "category", "price", "description"]}
         sortBy={["name", "quantity", "category", "price"]}
       />

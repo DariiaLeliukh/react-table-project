@@ -3,12 +3,12 @@ function TableRow(props) {
 
   return (
     <tr>
-      <td>{id}</td>
-      <td>{name}</td>
-      <td>{quantity}</td>
-      <td>{category}</td>
-      <td>{price}</td>
-      <td>{description}</td>
+      <td data-label={props.columns[0]}>{id}</td>
+      <td data-label={props.columns[1]}>{name}</td>
+      <td data-label={props.columns[2]}>{quantity}</td>
+      <td data-label={props.columns[3]}>{category}</td>
+      <td data-label={props.columns[4]}>{price}</td>
+      <td data-label={props.columns[5]}>{description}</td>
     </tr>
   );
 }
